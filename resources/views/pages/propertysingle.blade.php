@@ -316,9 +316,15 @@
             $('a[href="#mapProperty"]').on('shown.bs.tab', function () {
                 $("#map-property").gmap3({
                     address: "{{$property->address}}",
-                    zoom: 6,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                })
+                    zoom: 10,
+                    mapTypeId: google.maps.MapTypeId.HYBRID,
+                    mapTypeControl: true,
+                    mapTypeControlOptions: {
+                        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+                    },
+                    navigationControl: true,
+                    scrollwheel: true
+                });
             });
         });
     </script>
