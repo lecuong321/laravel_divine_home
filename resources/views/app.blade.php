@@ -26,7 +26,7 @@
     <link href="{{ URL::asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
     
      
-    <link href="{{ URL::asset('assets/css/'.getcong('site_style').'.css') }}@php {{ echo time(); }} @endphp" rel="stylesheet">
+    <link href="{{ URL::asset('assets/css/'.getcong('site_style').'.css?t=') }}@php {{ echo time(); }} @endphp" rel="stylesheet">
     
     <link href="{{ URL::asset('assets/css/responsive.css') }}" rel="stylesheet">
 
