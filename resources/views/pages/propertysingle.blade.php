@@ -272,8 +272,6 @@
     <!-- end:content -->
 
     @if (count($errors) > 0 or Session::has('flash_message'))
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-
         <script type="text/javascript">
             $(window).load(function () {
                 $('#modal-error').modal('show');
@@ -311,19 +309,21 @@
         </div>
     </div>
     <!-- end:modal-message -->
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script type="text/javascript">
-        /* map property */
-        $('a[href="#mapProperty"]').on('shown.bs.tab', function () {
-            $("#map-property").gmap3({
-                address: "{{$property->address}}",
-                zoom: 6,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            }).marker(function (map) {
-                return {
-                    position: map.getCenter(),
-                    icon: 'http://maps.google.com/mapfiles/marker_green.png'
-                };
+        $(document).ready(function () {
+            /* map property */
+            $('a[href="#mapProperty"]').on('shown.bs.tab', function () {
+                $("#map-property").gmap3({
+                    address: "{{$property->address}}",
+                    zoom: 6,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }).marker(function (map) {
+                    return {
+                        position: map.getCenter(),
+                        icon: 'http://maps.google.com/mapfiles/marker_green.png'
+                    };
+                });
             });
         });
     </script>
