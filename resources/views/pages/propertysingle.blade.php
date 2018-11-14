@@ -317,7 +317,7 @@
                 $("#map-property").gmap3({
                     map: {
                         options: {
-                            center: [{{ $property->map_latitude }}, {{ $property->map_longtitude }}],
+                            center: [{{ $property->map_latitude }}, {{ $property->map_longitude }}],
                             zoom: 13,
                             scrollwheel: false
                         }
