@@ -323,7 +323,7 @@
                         }
                     },
                     marker:{
-                        latLng: [{{ $property->map_latitude }}, {{ $property->map_longtitude }}],
+                        latLng: [{{ $property->map_latitude }}, {{ $property->map_longitude }}],
                         options: {
                             icon: new google.maps.MarkerImage(
                                     "http://maps.google.com/mapfiles/marker.png",
