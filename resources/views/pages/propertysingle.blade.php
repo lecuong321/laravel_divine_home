@@ -315,15 +315,22 @@
             /* map property */
             $('a[href="#mapProperty"]').on('shown.bs.tab', function () {
                 $("#map-property").gmap3({
-                    address: "{{$property->address}}",
-                    zoom: 10,
-                    mapTypeId: google.maps.MapTypeId.HYBRID,
-                    mapTypeControl: true,
-                    mapTypeControlOptions: {
-                        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+                    map: {
+                        options: {
+                            center: [-7.866315,110.389574],
+                            zoom: 13,
+                            scrollwheel: false
+                        }
                     },
-                    navigationControl: true,
-                    scrollwheel: true
+                    marker:{
+                        latLng: [-7.866315,110.389574],
+                        options: {
+                            icon: new google.maps.MarkerImage(
+                                    "https://dl.dropboxusercontent.com/u/29545616/Preview/location.png",
+                                    new google.maps.Size(48, 48, "px", "px")
+                            )
+                        }
+                    }
                 });
             });
         });
