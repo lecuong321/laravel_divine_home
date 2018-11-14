@@ -33,14 +33,14 @@ $(document).ready(function(){
 
 
     /* nice scroll */
-    $( 'html' ).niceScroll({
+    /*$( 'html' ).niceScroll({
         cursorcolor: '#434a54',
         cursorwidth: '10px',
         cursorborder: '1px solid #434a54',
         cursoropacitymax: 0.9,                
-        scrollspeed: 100,
+        scrollspeed: 100s,
         zindex: 1060
-    });
+    });*/
 
 
     /* carousel testimony */
