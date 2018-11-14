@@ -168,7 +168,7 @@
                                         <div class="col-md-12">
                                             <h2>{{$property->address}}</h2>
                                             <div class="map-card">
-                                                <div id="mapSingle" class="map-property">
+                                                <div id="map-property" class="map-property">
 
                                                 </div>
                                             </div>
