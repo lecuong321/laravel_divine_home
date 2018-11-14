@@ -80,7 +80,6 @@ class PropertiesController extends MainAdminController
 
         }
 
-
         //property featured image
         $featured_image = $request->file('featured_image');
 
@@ -233,11 +232,11 @@ class PropertiesController extends MainAdminController
         $property->description = $inputs['description'];
 
         $prepAddress = str_replace(' ', '+', $inputs['address']);
-        $geocode = file_get_contents('https://maps.google.com/maps/api/geocode/json?key=AIzaSyDeGQcQT8un8U3l__yRwMLAmp7QSEd7ZwM&address=' . $prepAddress . '&sensor=false');
+        $geocode = file_get_contents('https://maps.google.com/maps/api/geocode/json?key=123234325435345M&address=' . $prepAddress . '&sensor=false');
         $output = json_decode($geocode);
         $property->map_latitude = $output->results[0]->geometry->location->lat;
         $property->map_longitude = $output->results[0]->geometry->location->lng;
-        
+
         $property->save();
 
         if (!empty($inputs['id'])) {
@@ -271,8 +270,6 @@ class PropertiesController extends MainAdminController
 
     public function delete($id)
     {
-
-
         $property = Properties::findOrFail($id);
 
         \File::delete(public_path() . '/upload/properties/' . $property->featured_image . '-b.jpg');
