@@ -26,7 +26,7 @@
     <link href="{{ URL::asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
     
      
-    <link href="{{ URL::asset('assets/css/'.getcong('site_style').'.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('assets/css/'.getcong('site_style').'.css') }}@php {{ echo time(); }} @endphp" rel="stylesheet">
     
     <link href="{{ URL::asset('assets/css/responsive.css') }}" rel="stylesheet">
 
@@ -64,7 +64,7 @@
     <script src="{{ URL::asset('assets/js/masonry.pkgd.min.js') }}"></script>
     <script src="{{ URL::asset('assets/js/jquery.backstretch.js') }}"></script>
     <script src="{{ URL::asset('assets/js/jquery.nicescroll.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/script.js?t=') }} @php {{ echo time(); }} @endphp"></script>
+    <script src="{{ URL::asset('assets/js/script.js?t=') }}@php {{ echo time(); }} @endphp"></script>
     
     <script type="text/javascript">
 

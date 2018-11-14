@@ -34,8 +34,9 @@
             <div class="row">
               <div class="col-md-12 single-post">
                 <ul id="myTab" class="nav nav-tabs nav-justified">
-                  <li class="active"><a href="#detail" data-toggle="tab"><i class="fa fa-university"></i> Property Detail</a></li>
-                  <li><a href="#location" data-toggle="tab"><i class="fa fa-paper-plane-o"></i> Contact</a></li>
+                  <li class="active"><a href="#detail" data-toggle="tab"><i class="fa fa-university"></i>Thông Tin</a></li>
+                  <li><a href="#mapProperty" data-toggle="tab"><i class="fa fa-map-marker"></i>Vị Trí</a></li>
+                  <li><a href="#location" data-toggle="tab"><i class="fa fa-paper-plane-o"></i>Liên Hệ</a></li>
                 </ul>
 
                 <div id="myTabContent" class="tab-content">
@@ -149,6 +150,19 @@
 					<br/>
                     {!! getcong('disqus_comment_code') !!}	
                     
+                  </div>
+                  <!-- break -->
+                  <div class="tab-pane fade" id="mapProperty">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <h2>{{$property->address}}</h2>
+                              <div class="map-card">
+                                  <div id="mapSingle" class="map-property">
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                   </div>
                   <!-- break -->
                   <div class="tab-pane fade" id="location">
