@@ -317,16 +317,16 @@
                 $("#map-property").gmap3({
                     map: {
                         options: {
-                            center: [-7.866315,110.389574],
+                            center: [{{ $property->map_latitude }}, {{ $property->map_longtitude }}],
                             zoom: 13,
                             scrollwheel: false
                         }
                     },
                     marker:{
-                        latLng: [-7.866315,110.389574],
+                        latLng: [{{ $property->map_latitude }}, {{ $property->map_longtitude }}],
                         options: {
                             icon: new google.maps.MarkerImage(
-                                    "https://dl.dropboxusercontent.com/u/29545616/Preview/location.png",
+                                    "http://maps.google.com/mapfiles/marker.png",
                                     new google.maps.Size(48, 48, "px", "px")
                             )
                         }
