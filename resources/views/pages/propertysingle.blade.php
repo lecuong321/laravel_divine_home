@@ -318,12 +318,7 @@
                     address: "{{$property->address}}",
                     zoom: 6,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
-                }).marker(function (map) {
-                    return {
-                        position: map.getCenter(),
-                        icon: 'http://maps.google.com/mapfiles/marker_green.png'
-                    };
-                });
+                })
             });
         });
     </script>
