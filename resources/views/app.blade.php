@@ -24,6 +24,7 @@
     <!-- Custom styles for this template -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
     <link href="{{ URL::asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 
     <link href="{{ URL::asset('assets/css/'.getcong('site_style').'.css?t=') }}@php {{ echo time(); }} @endphp"
@@ -57,7 +58,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="{{ URL::asset('assets/js/jquery.js') }}"></script>
 <script src="{{ URL::asset('assets/js/bootstrap.js') }}"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=3456467575878&sensor=true&language=en"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBQYr2h3yL9-JEkYiuCYVm_e1zywUuE2_E&sensor=true&language=en"></script>
 <script src="{{ URL::asset('assets/js/gmap3.min.js') }}"></script>
 <script src="{{ URL::asset('assets/js/jquery.easing.js') }}"></script>
 <script src="{{ URL::asset('assets/js/jquery.jcarousel.min.js') }}"></script>
