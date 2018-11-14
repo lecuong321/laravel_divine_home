@@ -704,6 +704,7 @@ input[type="color"]:focus,
 .property-image{
 	position: relative;
 	overflow: hidden;
+	cursor: pointer;
 }
 
 .property-image img{

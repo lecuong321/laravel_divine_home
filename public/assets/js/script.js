@@ -38,7 +38,7 @@ $(document).ready(function(){
         cursorwidth: '10px',
         cursorborder: '1px solid #434a54',
         cursoropacitymax: 0.9,                
-        scrollspeed: 200,
+        scrollspeed: 100,
         zindex: 1060
     });
 
