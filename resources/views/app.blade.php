@@ -64,7 +64,7 @@
     <script src="{{ URL::asset('assets/js/masonry.pkgd.min.js') }}"></script>
     <script src="{{ URL::asset('assets/js/jquery.backstretch.js') }}"></script>
     <script src="{{ URL::asset('assets/js/jquery.nicescroll.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/script.js?t=') }}{{ time(); }}"></script>
+    <script src="{{ URL::asset('assets/js/script.js?t=') }} @php {{ echo time(); }} @endphp"></script>
     
     <script type="text/javascript">
 
