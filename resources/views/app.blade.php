@@ -57,7 +57,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="{{ URL::asset('assets/js/jquery.js') }}"></script>
 <script src="{{ URL::asset('assets/js/bootstrap.js') }}"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBQYr2h3yL9-JEkYiuCYVm_e1zywUuE2_E&sensor=false&amp;language=en"></script>
 <script src="{{ URL::asset('assets/js/gmap3.js') }}"></script>
 <script src="{{ URL::asset('assets/js/jquery.easing.js') }}"></script>
 <script src="{{ URL::asset('assets/js/jquery.jcarousel.min.js') }}"></script>
