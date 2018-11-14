@@ -1,46 +1,46 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-	var header_height = $('#header').height();
+    var header_height = $('#header').height();
 
-	/* parallax header */
-	function parallax(){
-	  var scrolled = $(window).scrollTop();
-	  $('#header .backstretch img').css('top',''+-(scrolled*0.6)+'px');
-      $('.heading').css('background-position', 'center '+-(scrolled*0.5)+'px');
-	}
+    /* parallax header */
+    function parallax() {
+        var scrolled = $(window).scrollTop();
+        $('#header .backstretch img').css('top', '' + -(scrolled * 0.6) + 'px');
+        $('.heading').css('background-position', 'center ' + -(scrolled * 0.5) + 'px');
+    }
 
 
     /* backstretch slider */
-   /* $('.header-slide').backstretch([
-      "slide/bg01.jpg",
-      "slide/bg02.jpg",
-      "slide/bg03.jpg"
-      ], {
-        fade: 850,
-        duration: 4000
-    });*/
+    /* $('.header-slide').backstretch([
+     "slide/bg01.jpg",
+     "slide/bg02.jpg",
+     "slide/bg03.jpg"
+     ], {
+     fade: 850,
+     duration: 4000
+     });*/
 
 
     /* navbar */
-	$(window).scroll(function(){
-		parallax();
-		if($(window).scrollTop() > header_height){
+    $(window).scroll(function () {
+        parallax();
+        if ($(window).scrollTop() > header_height) {
             //$('.navbar').css('border-bottom-color', '#3bafda');
-		}else{
+        } else {
             //$('.navbar').css('border-bottom-color', '#fff');
-		}
-	});
+        }
+    });
 
 
     /* nice scroll */
     /*$( 'html' ).niceScroll({
-        cursorcolor: '#434a54',
-        cursorwidth: '10px',
-        cursorborder: '1px solid #434a54',
-        cursoropacitymax: 0.9,                
-        scrollspeed: 100s,
-        zindex: 1060
-    });*/
+     cursorcolor: '#434a54',
+     cursorwidth: '10px',
+     cursorborder: '1px solid #434a54',
+     cursoropacitymax: 0.9,
+     scrollspeed: 100s,
+     zindex: 1060
+     });*/
 
 
     /* carousel testimony */
@@ -48,21 +48,21 @@ $(document).ready(function(){
         interval: 6000
     })
 
-	/* carousel partner */
-	var jcarousel = $('.jcarousel');
+    /* carousel partner */
+    var jcarousel = $('.jcarousel');
 
     jcarousel
         .on('jcarousel:reload jcarousel:create', function () {
             var width = jcarousel.innerWidth();
 
-            if(width >= 992){
-            	width = width / 5;
+            if (width >= 992) {
+                width = width / 5;
             } else if (width >= 768) {
                 width = width / 4;
             } else if (width >= 480) {
                 width = width / 3;
-            } else if(width >= 350){
-            	width = width / 2;
+            } else if (width >= 350) {
+                width = width / 2;
             }
 
             jcarousel.jcarousel('items').css('width', width + 'px');
@@ -79,28 +79,28 @@ $(document).ready(function(){
     $('.jcarousel-control-next')
         .jcarouselControl({
             target: '+=1'
-    	});
+        });
 
     $('.jcarousel-pagination')
-        .on('jcarouselpagination:active', 'a', function() {
+        .on('jcarouselpagination:active', 'a', function () {
             $(this).addClass('active');
         })
-        .on('jcarouselpagination:inactive', 'a', function() {
+        .on('jcarouselpagination:inactive', 'a', function () {
             $(this).removeClass('active');
         })
-        .on('click', function(e) {
+        .on('click', function (e) {
             e.preventDefault();
         })
         .jcarouselPagination({
             perPage: 1,
-            item: function(page) {
+            item: function (page) {
                 return '<a href="#' + page + '">' + page + '</a>';
-        }
-    });
+            }
+        });
 
 
     /* scrolltop */
-    $('.scroltop').on('click', function(event) {
+    $('.scroltop').on('click', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
@@ -111,7 +111,7 @@ $(document).ready(function(){
 
     /* masonry layout */
     var $container = $('.container-realestate');
-    $container.imagesLoaded( function(){
+    $container.imagesLoaded(function () {
         $container.masonry();
     });
 
@@ -119,8 +119,8 @@ $(document).ready(function(){
     /* modal */
     $('.modal').on('shown.bs.modal', function () {
         var curModal = this;
-        $('.modal').each(function(){
-            if(this != curModal){
+        $('.modal').each(function () {
+            if (this != curModal) {
                 $(this).modal('hide');
             }
         });
@@ -135,20 +135,20 @@ $(document).ready(function(){
     $("#map").gmap3({
         map: {
             options: {
-              center: [-7.866315,110.389574],
-              zoom: 12,
-              scrollwheel: false
-            }  
-         },
-        marker:{
-            latLng: [-7.866315,110.389574],
-            options: {
-             icon: new google.maps.MarkerImage(
-               "https://dl.dropboxusercontent.com/u/29545616/Preview/location.png",
-               new google.maps.Size(48, 48, "px", "px")
-             )
+                center: [-7.866315, 110.389574],
+                zoom: 12,
+                scrollwheel: false
             }
-         }
+        },
+        marker: {
+            latLng: [-7.866315, 110.389574],
+            options: {
+                icon: new google.maps.MarkerImage(
+                    "https://dl.dropboxusercontent.com/u/29545616/Preview/location.png",
+                    new google.maps.Size(48, 48, "px", "px")
+                )
+            }
+        }
     });
 
 
@@ -159,24 +159,24 @@ $(document).ready(function(){
 
 
     /* map property */
-    $('a[href="#location"]').on('shown.bs.tab', function(){
+    $('a[href="#mapProperty"]').on('shown.bs.tab', function () {
         $("#map-property").gmap3({
             map: {
                 options: {
-                  center: [-7.866315,110.389574],
-                  zoom: 13,
-                  scrollwheel: false
-                }  
-             },
-            marker:{
-                latLng: [-7.866315,110.389574],
-                options: {
-                 icon: new google.maps.MarkerImage(
-                   "https://dl.dropboxusercontent.com/u/29545616/Preview/location.png",
-                   new google.maps.Size(48, 48, "px", "px")
-                 )
+                    center: [-7.866315, 110.389574],
+                    zoom: 13,
+                    scrollwheel: false
                 }
-             }
+            },
+            marker: {
+                latLng: [-7.866315, 110.389574],
+                options: {
+                    icon: new google.maps.MarkerImage(
+                        "https://dl.dropboxusercontent.com/u/29545616/Preview/location.png",
+                        new google.maps.Size(48, 48, "px", "px")
+                    )
+                }
+            }
         });
     })
 });
